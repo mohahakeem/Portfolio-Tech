@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary: #6c63ff;
+    --color-success: #00bf8e;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    --color-bg:#1f2641; 
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
+ 
+--container-width-lg: 80%;
+--container-width-md: 90%;
+--container-width-sm: 94%;
+
+--transition: all 400ms ease ;
+
+
+}
+
+body {
+    font-family:'Montserrat', sans-serif;
+    line-height: 1.7;
+    color: var(--color-white);
+    background-color: var(--color-bg);
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto; 
+}
+
+section {
+    padding: 6rem 0;
+}
+
+section h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4, 
+h5 {
+    line-height: 1.2;
+}
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem; 
+}
+a {
+    color: var(--color-white);
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.achivement {
+    margin-top: 3rem;
+
+   
+}
+
+.achivements_container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+}
+
+.achivement_right p{
+    margin: 1rem auto;
+}
+
+.achivements_icons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem;
+    
+}
+
+
+
+.icons{
+    padding: 2rem;
+    text-align: center;
+    background: var(--color-bg1);
+    border-radius: 1rem;
+    transition: var(--transition);
+}
+.icons h3{
+    margin: 0.5rem auto;
+}
+
+.icons:hover{
+    background-color: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.icons span{
+    background-color: var(--color-danger);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.icons:nth-child(2) span{
+    background: var(--color-success);
+}
+
+.icons:nth-child(3) span{
+    background: var(--color-warning);
+}
+
+
+.team_icons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.about_members{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+
+.team{
+    background: var(--color-bg2);
+    padding: 2rem;
+    position: relative;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.team:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+   
+}
+
+.team img {
+    filter: saturate(0);
+}
+
+.team:hover img{
+    filter: saturate(1);
+}
+
+.team_info * {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.team_info h3{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.team_info p{
+    color: var(--color-light);
+}
+
+.team_socials {
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+}
+
+.team:hover .team_socials{
+    right: 0%;
+}
+
+.team_socials a{
+    padding: 1rem
+}
+
+
+
+/* Media Quaries  */
+
+@media screen  and (max-width: 1024px){
+    .achivement{
+        margin-top: 1.5rem;
+    }
+    .about_container h1 {
+        font-size: 1.5rem;
+    }
+
+    .achivements_container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .achivement_left {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .team_icons{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+
+    .team_info {
+        margin-top: 0.5rem;
+    }
+
+    .team {
+        padding: 1rem;
+    }
+
+    
+}
+   
+
+/* Mobile Phone */
+
+@media screen and (max-width: 600px) {
+    .achivements_icons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team_icons{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team{
+        padding: 0;
+    }
+    
+}
